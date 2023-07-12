@@ -1,39 +1,31 @@
 
 function mainFunction() {
-  var textareaElement = document.getElementById('sources');
-
   var boutonVerif = document.createElement('button');
   boutonVerif.textContent = 'Vérifier';
   boutonVerif.classList.add('edit-submit');
   boutonVerif.style.float = 'right';
   boutonVerif.style.display = 'flex';
   boutonVerif.style.justifyContent = 'center';
-  boutonVerif.style.marginTop = '-4px';
-  var container = document.createElement('div');
-  container.classList.add('edit-submit-container');
-  container.appendChild(textareaElement.cloneNode(true));
-  container.appendChild(boutonVerif);
-
-  textareaElement.parentNode.replaceChild(container, textareaElement);
+  boutonVerif.style.marginTop = '-60px';
+  
+  var divSubmit = document.querySelector('div.edit-submit');
+  divSubmit.insertAdjacentElement('afterend', boutonVerif);
 
   boutonVerif.addEventListener('click', function () {
     suppression()
     recuperationDom();
   });
-  var textareaElement = document.getElementById('sources');
+  
   var boutonManuel = document.createElement('button');
   boutonManuel.textContent = 'Manuel';
   boutonManuel.classList.add('edit-submit');
   boutonManuel.style.float = 'left';
   boutonManuel.style.display = 'flex';
-  boutonManuel.style.marginTop = '-4px';
   boutonManuel.style.justifyContent = 'center';
-  var container = document.createElement('div');
-  container.classList.add('edit-submit-container');
-  container.appendChild(textareaElement.cloneNode(true));
-  container.appendChild(boutonManuel);
-
-  textareaElement.parentNode.replaceChild(container, textareaElement);
+  boutonManuel.style.marginTop = '-60px';
+  
+  var divSubmit = document.querySelector('div.edit-submit');
+  divSubmit.insertAdjacentElement('afterend', boutonManuel);
 
   boutonManuel.addEventListener('click', function () {
     chrome.runtime.sendMessage({ action: 'manuel' });
