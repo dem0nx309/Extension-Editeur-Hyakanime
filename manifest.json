@@ -8,7 +8,12 @@
       ],
       "content_scripts": [
         {
-          "matches": ["https://www.hyakanime.fr/edit/*"],
+          "matches": [
+            "http://www.hyakanime.fr/edit/*",
+            "https://www.hyakanime.fr/edit/*",
+            "http://hyakanime.fr/edit/*",
+            "https://hyakanime.fr/edit/*"
+          ],
           "js": ["content.js"]
         }
       ],
