@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Hyakanime Edit Helper",
+    "version": "1.0",
+    "permissions": [
+        "notifications",
+        "tabs"
+      ],
+      "content_scripts": [
+        {
+          "matches": ["https://www.hyakanime.fr/edit/*"],
+          "js": ["content.js"]
+        }
+      ],
+      "background": {
+        "service_worker": "background.js"
+      },
+    "action": {
+      "default_icon": {
+        "16": "images/icon.png",
+        "48": "images/icon.png",
+        "128": "images/icon.png"
+      }
+    }
+  }
+  
