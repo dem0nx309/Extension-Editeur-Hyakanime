@@ -213,8 +213,15 @@ function recuperationDom() {
     sources = inputElement.value;
     console.log(sources);
   } else {
+    if(!inputElement)
+    {
+      console.log("L'élément sources est pas sur la page édit")
+      sources = "L'élément sources est pas sur la page édit, ca viendras peut etre plus tard"
+    }
+    else{
     console.log("L'élément Sources n'a pas été trouvé.");
     sources = undefined;
+    }
   }
 
   //click Studios
@@ -514,7 +521,7 @@ function verification(titreFrancais, crunchyroll, wakanim, adn, netflix, prime, 
     warning("⚠️ Vérifier bien d'avoir mis vos sources et notes, avec où vous avez tiré vos informations et des liens")
   }
 
-  if (twitterFr != undefined || (twitterJp != undefined && hashtag == undefined)) {
+  if ((twitterFr != undefined || twitterJp != undefined) && hashtag == undefined) {
     alerte("⚠️ Merci de préciser l'hashtag twitter vu que vous avez mis le twitter")
   }
 
