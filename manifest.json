@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Hyakanime Edit Helper",
-    "version": "1.0",
+    "version": "1.5",
     "permissions": [
         "notifications",
         "tabs"
@@ -12,7 +12,11 @@
             "http://www.hyakanime.fr/edit/*",
             "https://www.hyakanime.fr/edit/*",
             "http://hyakanime.fr/edit/*",
-            "https://hyakanime.fr/edit/*"
+            "https://hyakanime.fr/edit/*",
+            "https://www.hyakanime.fr/new",
+            "https://hyakanime.fr/new",
+            "http://www.hyakanime.fr/new",
+            "http://hyakanime.fr/new"
           ],
           "js": ["content.js"]
         }
