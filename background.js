@@ -14,7 +14,7 @@ chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
   });
   chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
     console.log(changeInfo.url)
-    if (changeInfo.url && (changeInfo.url.startsWith("https://www.hyakanime.fr/edit/") || changeInfo.url.startsWith("https://hyakanime.fr/edit/") || changeInfo.url.startsWith("http://www.hyakanime.fr/edit/") || changeInfo.url.startsWith("https://hyakanime.fr/edit/"))) {
+    if (changeInfo.url && (changeInfo.url.startsWith("https://www.hyakanime.fr/edit/") || changeInfo.url.startsWith("https://hyakanime.fr/edit/") || changeInfo.url.startsWith("http://www.hyakanime.fr/edit/") || changeInfo.url.startsWith("https://hyakanime.fr/edit/") || changeInfo.url.startsWith("https://www.hyakanime.fr/new") || changeInfo.url.startsWith("https://hyakanime.fr/new") || changeInfo.url.startsWith("http://hyakanime.fr/new") || changeInfo.url.startsWith("http://www.hyakanime.fr/new"))) {
       chrome.tabs.reload(tabId);
       console.log("reload bien fait")
     } 
